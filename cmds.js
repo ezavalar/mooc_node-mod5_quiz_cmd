@@ -203,7 +203,7 @@ exports.playCmd = rl => {
       if(toBeResolved.length===0)
       {
            log('No hay mas preguntas que resolver.', 'blue');
-           log("Puntaje: ",'green');
+           log("Aciertos: ",'green');
            biglog(score, 'green');
       }
       else
@@ -217,14 +217,15 @@ exports.playCmd = rl => {
                {
                     log('Correcto :)', 'green');
                     score++;
-                    log("Puntaje: ",'green');
+                    log("Aciertos: ",'green');
                     biglog(score, 'green');
                     playOne();
                }
                else
                {
                     log('Incorrecto :(', 'red'); 
-                    log("Puntaje: ",'green');
+                    log('Fin del examen.', 'blue');
+                    log("Aciertos: ",'green');
                     biglog(score, 'green');
                }
            });
